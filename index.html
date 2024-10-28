@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author"   content="Cleiton dos Santos">
+	<meta name="description" content="Uma plataforma de dashboard para gerenciamento de ministérios e treinamentos.">
+	<meta name="keywords" content="dashboard, ministérios, treinamentos, evangelismo, financeiro">
+	
+	<meta property="og:type" content="website" /> <!-- TIPO DE ARQUIVO -->
+    <meta property="og:url" content="https://www.dominio.com.br/" /> <!-- ENDEREÇO DO SITE -->
+    <meta property="og:title" content="Título do Site" /> <!-- TITULO DO ARQUIVO -->
+    <meta property="og:image" content="https://www.dominio.com.br/img/logo.png" /><!-- IMAGEM DE REFERENCIA DO SITE -->
+    <meta property="og:description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit." /> <!-- DESCRIÇÃO DO SITE -->
+
+	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+	<link rel="stylesheet" type="text/css" href="assets/css/app.css">
+
+	<title>Dashboard</title>
+</head>
+
+<body>
+
+	<header>
+		<a href="." id="brand">
+			<img src="https://via.placeholder.com/200x60" alt="logo" id="logo" loading="lazy">
+		</a>
+
+		<nav id="menu-main">
+			<div class="menu-item">
+				<a href="#treinamentos" class="item-link">
+					<div class="material-symbols-outlined">tools_installation_kit</div>
+					<div class="item-label">Treinamentos</div>
+				</a>
+			</div>
+			<div class="menu-item active">
+				<a href="#ministerio" class="item-link">
+					<div class="material-symbols-outlined">language</div>
+					<div class="item-label">Ministério</div>
+				</a>
+			</div>
+			<div class="menu-item">
+				<a href="#financeiro" class="item-link">
+					<div class="material-symbols-outlined">finance</div>
+					<div class="item-label">Financeiro</div>
+				</a>
+			</div>
+			<div class="menu-item">
+				<a href="#estoque" class="item-link">
+					<div class="material-symbols-outlined">box</div>
+					<div class="item-label">Estoque</div>
+				</a>
+			</div>
+		</nav>
+
+		<div id="ctrls-right">
+			<button type="button" id="btnProfile"	 title="Menu do Perfil" 	   aria-label="Menu do Perfil" 		style="background-image: url('assets/img/profile.webp');"></button>
+			<button type="button" id="openMenuMain"	 title="Abrir menu principal"  aria-label="Abrir menu principal"><span class="material-symbols-outlined">menu</span></button>
+			<button type="button" id="closeMenuMain" title="Fechar menu principal" aria-label="Fechar menu principal"><span class="material-symbols-outlined">close</span></button>
+		</div>
+
+		<nav id="menu-main-responsive">
+			<div>Nome do Módulo</div>
+			
+			<a href="#treinamentos" class="active">
+				<div class="material-symbols-outlined">tools_installation_kit</div>
+				<div class="item-label">Treinamentos</div>
+			</a>
+			<a href="#ministerio">
+				<div class="material-symbols-outlined">language</div>
+				<div class="item-label">Ministério</div>
+			</a>
+			<a href="#financeiro">
+				<div class="material-symbols-outlined">finance</div>
+				<div class="item-label">Financeiro</div>
+			</a>
+		</nav>
+	
+		<div id="menu-profile">
+			<div id="btnCloseProfile"><span class="material-symbols-outlined">close</span></div>
+	
+			<div>
+				<a href="#" style="background-image: url('assets/img/profile.webp');"></a>
+				<a href="#">Cleiton Araújo da Silva</a>
+				<a href="#">cleiton.jnet@gmail.com</a>
+				<a href="#">Editar Perfil</a>
+			</div>
+	
+			<nav>
+				<a href="#" class="active">
+					<div class="material-symbols-outlined">manage_accounts</div>
+					<div class="label">Módulos 1</div>
+				</a>
+				<a href="#">
+					<div class="material-symbols-outlined">manage_accounts</div>
+					<div class="label">Módulos 2</div>
+				</a>
+				<a href="#">
+					<div class="material-symbols-outlined">manage_accounts</div>
+					<div class="label">Módulos 3</div>
+				</a>
+			</nav>
+
+			<div id="ProfileBottom">
+				<a href="#">
+					<div class="material-symbols-outlined">manufacturing</div>
+					<div class="label">Setup</div>
+				</a>
+				<button id="btnLogout" type="submit">
+					<div class="material-symbols-outlined">logout</div>
+					<div class="label">Sair</div>
+				</button>	
+			</div>
+		</div>
+	
+	</header>
+
+	<aside id="aside-left">
+		<div class="header">
+			<div>Menu de Ações</div>
+			<button type="button" title="Fechar menu Lateral" aria-label="Fechar menu Lateral" id="closeMenu"><span class="material-symbols-outlined">close</span></button>
+		</div>
+		<div id="aside-left-nav">
+			<nav>
+				<a href="#">
+					<div class="material-symbols-outlined">segment</div>
+					<div class="label">Ver lista</div>
+				</a>
+				<a href="#" class="active">
+					<div class="material-symbols-outlined">add_circle</div>
+					<div class="label">Cadastrar novo</div>
+				</a>
+				<a href="#">
+					<div class="material-symbols-outlined">view_day</div>
+					<div class="label">Visualizar</div>
+				</a>
+				<a href="#">
+					<div class="material-symbols-outlined">contract_edit</div>
+					<div class="label">Editar</div>
+				</a>
+				<a href="#">
+					<div class="material-symbols-outlined">lab_profile</div>
+					<div class="label">Relatório</div>
+				</a>
+				<a href="#">
+					<div class="material-symbols-outlined">disabled_by_default</div>
+					<div class="label">Remover</div>
+				</a>
+			</nav>
+		</div>
+	</aside>
+
+	<main>
+		<div id="title-page">
+			<button type="button" title="Abrir menu Lateral" aria-label="Abrir menu Lateral" id="openMenu">
+				<span class="material-symbols-outlined">menu</span>
+			</button>
+			<h1>Título da Página</h1>	
+		</div>
+		<div class="content">1</div>
+		<div class="content">2</div>
+	</main>
+
+	<aside id="aside-right">
+		Aside right
+	</aside>
+
+	<footer>
+		<div>Nome da Organização<span> :: Todos os direitos reservador</span></div>
+	</footer>
+
+	<script type="module" src="assets/js/menu.js"></script>
+</body>
